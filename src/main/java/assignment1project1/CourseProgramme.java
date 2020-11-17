@@ -1,22 +1,22 @@
 package assignment1project1;
-//test
 import java.util.ArrayList;
 import org.joda.time.LocalDate;
 
 /**
- *
- * @author darraghoconnell
+ * @author darraghoconnell(17371056)
  */
 
 public class CourseProgramme{
-    public int i;
+    //Declaring Variables
+    public int i;                                                   
     private String CourseName, newModule;
     private ArrayList <Module> modules;
     private ArrayList <Student> courseStudents;
     private LocalDate StartDate,EndDate;
     
     public CourseProgramme( String coursename, LocalDate startdate, LocalDate enddate){
-        CourseName = coursename;
+    //Initialising Variables
+        CourseName = coursename;                                   
         StartDate= startdate;
         EndDate = enddate;
         modules = new ArrayList<Module>();
@@ -24,15 +24,15 @@ public class CourseProgramme{
     }
     
     
-    public void addModule(Module x){
+    public void addModule(Module x){                        //Method to add Modules to the Course
         modules.add(x);
     }
     
-     public void addStudents(Module x){
+     public void addStudents(Module x){                     //Method to add Students to the Course
          courseStudents.addAll(x.getStudents());
     }
    
-    public String getModules(){
+    public String getModules(){                             //GET methods for Course attributes
          return modules.toString();
     }
     
@@ -40,12 +40,20 @@ public class CourseProgramme{
          return courseStudents.toString();
     }
     
-        public String getStartDate(){
+    public String getStartDate(){
          return StartDate.toString();
-        }
+    }
     
-        public String getEndDate(){
+    public String getEndDate(){
          return EndDate.toString();
-        }
+    }
+    
+    public String getCoursename(){
+        return CourseName;
+    }
+    
+    public void setCourseName(String x){                        //SET Methods for Course Attributes
+        CourseName = x;
+    }
 }
 
