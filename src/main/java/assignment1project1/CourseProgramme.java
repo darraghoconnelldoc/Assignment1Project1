@@ -1,7 +1,6 @@
 package assignment1project1;
 //test
 import java.util.ArrayList;
-import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 /**
@@ -40,5 +39,13 @@ public class CourseProgramme{
     public String getStudents(){
          return courseStudents.toString();
     }
+    
+        public String getStartDate(){
+         return StartDate.toString();
+        }
+    
+        public String getEndDate(){
+         return EndDate.toString();
+        }
 }
 
